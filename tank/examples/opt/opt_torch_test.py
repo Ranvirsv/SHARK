@@ -1,14 +1,16 @@
 import unittest
-
+import numpy as np
 import pytest
+import torch
 import torch_mlir
-from hacked_hf_opt import OPTModel
+from shark_hf_opt import OPTForCausalLM
 from shark.iree_utils._common import check_device_drivers, device_driver_info
 from shark.shark_inference import SharkInference
 from tank.model_utils import compare_tensors
 from transformers import AutoTokenizer
 
-OPT_MODEL = "facebook/opt-350m"
+
+OPT_MODEL = "facebook/opt-1.3b"
 OPT_MODEL_66B = "facebook/opt-66b"
 
 
@@ -23,18 +25,17 @@ class OPTModuleTester:
         tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
         # config = OPTConfig()
         # opt_model = OPTModel(config)
-        opt_model = OPTModel.from_pretrained(model_name)
+        opt_model = OPTForCausalLM.from_pretrained(model_name)
         opt_model.eval()
-
-        inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
+        text = "Hello my name is Bert and I love"
+        inputs = tokenizer(text, return_tensors="pt")
         input_ids, attention_mask = (
             inputs.data["input_ids"],
             inputs.data["attention_mask"],
         )
-
         module = torch_mlir.compile(
             opt_model,
-            (input_ids, attention_mask),
+            torch.cat((input_ids, attention_mask)),
             output_type=torch_mlir.OutputType.LINALG_ON_TENSORS,
             use_tracing=True,
         )
@@ -42,9 +43,11 @@ class OPTModuleTester:
         model_mlir = module.operation.get_asm(
             large_elements_limit=None, enable_debug_info=True
         )
+        with open("OPTModule.mlir", "w") as f:
+            f.write(model_mlir)
+        print("Saved mlir at ./OPTModule.mlir")
         func_name = "forward"
-        act_out = opt_model(input_ids, attention_mask).detach()
-
+        act_out = opt_model(input_ids, return_dict=False)
         # mlir_importer = SharkImporter(
         #    model,
         #    (input,),
@@ -56,14 +59,17 @@ class OPTModuleTester:
 
         shark_module = SharkInference(
             model_mlir,
-            func_name,
             device=device,
             mlir_dialect="tm_tensor",
             is_benchmark=self.benchmark,
         )
         shark_module.compile()
-        results = shark_module.forward((input_ids, attention_mask))
-        assert compare_tensors(act_out, results)
+        results = shark_module("forward", torch.stack((input_ids, attention_mask), dim=1))
+        #exp_out = tokenizer.decode(act_out[0][0], skip_special_tokens=True, clean_up_tokenization_spaces=False)
+        #shark_out = tokenizer.decode(results[0][0], skip_special_tokens=True, clean_up_tokenization_spaces=False)
+        #print("PyTorch:" + exp_out)
+        #print("SHARK:" + shark_out)
+        np.testing.assert_allclose(act_out[0][0].detach(), results[0][0], atol=1e-02, rtol=1e-03)
 
         if self.benchmark:
             shark_module.shark_runner.benchmark_all_csv(
