@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 # App info
 APP_NAME = "shark_sd"
-APP_VERSION = 12082022.365
+APP_VERSION = 06072023.1
 
 # Current module dir (when frozen this equals sys._MEIPASS)
 # https://pyinstaller.org/en/stable/runtime-information.html#using-file
@@ -32,9 +32,9 @@ TARGET_DIR = pathlib.Path(os.path.join(UPDATE_CACHE_DIR, "targets"))
 
 # Update-server urls
 METADATA_BASE_URL = (
-    "https://storage.googleapis.com/shark_tank/releases/metadata"
+    "http://localhost:8000/releases/metadata"
 )
-TARGET_BASE_URL = "https://storage.googleapis.com/shark_tank/releases/targets"
+TARGET_BASE_URL = "http://localhost:8000/releases/targets"
 
 # Location of trusted root metadata file
 TRUSTED_ROOT_SRC = MODULE_DIR / "root.json"

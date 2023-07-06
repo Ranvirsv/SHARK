@@ -85,8 +85,8 @@ class SharkEulerDiscreteScheduler(EulerDiscreteScheduler):
                 f"-iree-vulkan-target-triple={args.iree_vulkan_target_triple}"
             )
         # Disable bindings fusion to work with moltenVK.
-        if sys.platform == "darwin":
-            iree_flags.append("-iree-stream-fuse-binding=false")
+        # if sys.platform == "darwin":
+        #     iree_flags.append("-iree-stream-fuse-binding=false")
 
         def _import(self):
             scaling_model = ScalingModel()

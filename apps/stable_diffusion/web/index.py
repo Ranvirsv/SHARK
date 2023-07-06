@@ -1,6 +1,12 @@
 from multiprocessing import Process, freeze_support
 import os
 import sys
+import settings
+import logging
+import shutil
+import time
+
+from tufup.client import Client
 
 if sys.platform == "darwin":
     # import before IREE to avoid torch-MLIR library issues

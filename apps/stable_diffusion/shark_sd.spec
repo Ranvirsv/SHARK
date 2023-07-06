@@ -34,6 +34,7 @@ datas += collect_data_files('tkinter')
 datas += collect_data_files('webview')
 datas += collect_data_files('sentencepiece')
 datas += [
+         ( './temp/repository/metadata/root.json', 'resources'),
          ( 'src/utils/resources/prompts.json', 'resources' ),
          ( 'src/utils/resources/model_db.json', 'resources' ),
          ( 'src/utils/resources/opt_flags.json', 'resources' ),
@@ -42,7 +43,12 @@ datas += [
          ( 'web/ui/logos/*', 'logos' )
          ]
 
+torch_path = sys.prefix + '/lib/python3.11/site-packages/torch/lib/libtorch_python.dylib'
+
 binaries = []
+binaries += [
+    (torch_path, 'resources')
+    ]
 
 block_cipher = None
 
@@ -75,7 +81,7 @@ exe = EXE(
     a.datas,
     [],
     name='shark_sd',
-    debug=False,
+    debug=True,
     bootloader_ignore_signals=False,
     strip=False,
     upx=False,

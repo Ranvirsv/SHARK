@@ -488,8 +488,8 @@ def get_opt_flags(model, precision="fp16"):
         )
 
     # Disable bindings fusion to work with moltenVK.
-    if sys.platform == "darwin":
-        iree_flags.append("-iree-stream-fuse-binding=false")
+    # if sys.platform == "darwin":
+    #     iree_flags.append("-iree-stream-fuse-binding=false")
 
     if "default_compilation_flags" in opt_flags[model][is_tuned][precision]:
         iree_flags += opt_flags[model][is_tuned][precision][
