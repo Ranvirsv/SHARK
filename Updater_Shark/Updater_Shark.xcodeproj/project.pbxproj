@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B20C1E572A685B1D005923AE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29AE4092A661B0200F0BCAC /* Sparkle.framework */; };
+		B20C1E582A685B1D005923AE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B29AE4092A661B0200F0BCAC /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B29AE3F32A661A1200F0BCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE3F22A661A1200F0BCAC /* AppDelegate.m */; };
+		B29AE3F62A661A1200F0BCAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE3F52A661A1200F0BCAC /* ViewController.m */; };
+		B29AE3F82A661A1400F0BCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29AE3F72A661A1400F0BCAC /* Assets.xcassets */; };
+		B29AE3FB2A661A1400F0BCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29AE3F92A661A1400F0BCAC /* Main.storyboard */; };
+		B29AE3FD2A661A1400F0BCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE3FC2A661A1400F0BCAC /* main.m */; };
+		B29AE40E2A661B2900F0BCAC /* GitHubRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE40D2A661B2900F0BCAC /* GitHubRelease.m */; };
+		B29AE4102A661B3200F0BCAC /* GitHubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE40F2A661B3200F0BCAC /* GitHubClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B29AE4082A661A3800F0BCAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B20C1E582A685B1D005923AE /* Sparkle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B29AE3EE2A661A1200F0BCAC /* Updater_Shark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Updater_Shark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29AE3F12A661A1200F0BCAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B29AE3F22A661A1200F0BCAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B29AE3F42A661A1200F0BCAC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B29AE3F52A661A1200F0BCAC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B29AE3F72A661A1400F0BCAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B29AE3FA2A661A1400F0BCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B29AE3FC2A661A1400F0BCAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B29AE3FE2A661A1400F0BCAC /* Updater_Shark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Updater_Shark.entitlements; sourceTree = "<group>"; };
+		B29AE4092A661B0200F0BCAC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		B29AE40B2A661B1500F0BCAC /* GitHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubClient.h; sourceTree = "<group>"; };
+		B29AE40C2A661B1F00F0BCAC /* GitHubRelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubRelease.h; sourceTree = "<group>"; };
+		B29AE40D2A661B2900F0BCAC /* GitHubRelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubRelease.m; sourceTree = "<group>"; };
+		B29AE40F2A661B3200F0BCAC /* GitHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubClient.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B29AE3EB2A661A1200F0BCAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20C1E572A685B1D005923AE /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B29AE3E52A661A1200F0BCAC = {
+			isa = PBXGroup;
+			children = (
+				B29AE4092A661B0200F0BCAC /* Sparkle.framework */,
+				B29AE3F02A661A1200F0BCAC /* Updater_Shark */,
+				B29AE3EF2A661A1200F0BCAC /* Products */,
+				B29AE4042A661A3700F0BCAC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B29AE3EF2A661A1200F0BCAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE3EE2A661A1200F0BCAC /* Updater_Shark.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B29AE3F02A661A1200F0BCAC /* Updater_Shark */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE3F12A661A1200F0BCAC /* AppDelegate.h */,
+				B29AE3F22A661A1200F0BCAC /* AppDelegate.m */,
+				B29AE40C2A661B1F00F0BCAC /* GitHubRelease.h */,
+				B29AE40D2A661B2900F0BCAC /* GitHubRelease.m */,
+				B29AE40B2A661B1500F0BCAC /* GitHubClient.h */,
+				B29AE40F2A661B3200F0BCAC /* GitHubClient.m */,
+				B29AE3F42A661A1200F0BCAC /* ViewController.h */,
+				B29AE3F52A661A1200F0BCAC /* ViewController.m */,
+				B29AE3F72A661A1400F0BCAC /* Assets.xcassets */,
+				B29AE3F92A661A1400F0BCAC /* Main.storyboard */,
+				B29AE3FC2A661A1400F0BCAC /* main.m */,
+				B29AE3FE2A661A1400F0BCAC /* Updater_Shark.entitlements */,
+			);
+			path = Updater_Shark;
+			sourceTree = "<group>";
+		};
+		B29AE4042A661A3700F0BCAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B29AE3ED2A661A1200F0BCAC /* Updater_Shark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29AE4012A661A1400F0BCAC /* Build configuration list for PBXNativeTarget "Updater_Shark" */;
+			buildPhases = (
+				B29AE3EA2A661A1200F0BCAC /* Sources */,
+				B29AE3EB2A661A1200F0BCAC /* Frameworks */,
+				B29AE3EC2A661A1200F0BCAC /* Resources */,
+				B29AE4082A661A3800F0BCAC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Updater_Shark;
+			productName = Updater_Shark;
+			productReference = B29AE3EE2A661A1200F0BCAC /* Updater_Shark.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B29AE3E62A661A1200F0BCAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B29AE3ED2A661A1200F0BCAC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = B29AE3E92A661A1200F0BCAC /* Build configuration list for PBXProject "Updater_Shark" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B29AE3E52A661A1200F0BCAC;
+			productRefGroup = B29AE3EF2A661A1200F0BCAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B29AE3ED2A661A1200F0BCAC /* Updater_Shark */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B29AE3EC2A661A1200F0BCAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29AE3F82A661A1400F0BCAC /* Assets.xcassets in Resources */,
+				B29AE3FB2A661A1400F0BCAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B29AE3EA2A661A1200F0BCAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29AE3F62A661A1200F0BCAC /* ViewController.m in Sources */,
+				B29AE3FD2A661A1400F0BCAC /* main.m in Sources */,
+				B29AE40E2A661B2900F0BCAC /* GitHubRelease.m in Sources */,
+				B29AE4102A661B3200F0BCAC /* GitHubClient.m in Sources */,
+				B29AE3F32A661A1200F0BCAC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B29AE3F92A661A1400F0BCAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B29AE3FA2A661A1400F0BCAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B29AE3FF2A661A1400F0BCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B29AE4002A661A1400F0BCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B29AE4022A661A1400F0BCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Updater_Shark/Updater_Shark.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.nod.Updater-Shark";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		B29AE4032A661A1400F0BCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Updater_Shark/Updater_Shark.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.nod.Updater-Shark";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B29AE3E92A661A1200F0BCAC /* Build configuration list for PBXProject "Updater_Shark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29AE3FF2A661A1400F0BCAC /* Debug */,
+				B29AE4002A661A1400F0BCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29AE4012A661A1400F0BCAC /* Build configuration list for PBXNativeTarget "Updater_Shark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29AE4022A661A1400F0BCAC /* Debug */,
+				B29AE4032A661A1400F0BCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B29AE3E62A661A1200F0BCAC /* Project object */;
+}
