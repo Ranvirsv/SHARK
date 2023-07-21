@@ -38,16 +38,14 @@
     }];
     
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    return downloadURL;
+    return @"https://www.dropbox.com/e/scl/fi/10j1isjruy3iuwzh9v9r3/DMG_Assembly.dmg";
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Create the updater object
     self.updaterController = [[SPUStandardUpdaterController alloc] initWithUpdaterDelegate:self userDriverDelegate:self];
     [self feedURLStringForUpdater: self.updaterController.updater];
-        
-    NSLog(@"Updater: %@", self.updaterController.updater);
-    NSLog(@"Updating Link: %@", self.updaterController.updater.feedURL);
+    [self.updaterController.updater checkForUpdates];
 }
 
 
