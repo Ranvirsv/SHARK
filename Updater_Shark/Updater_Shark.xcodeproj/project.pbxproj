@@ -16,6 +16,7 @@
 		B29AE3FD2A661A1400F0BCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE3FC2A661A1400F0BCAC /* main.m */; };
 		B29AE40E2A661B2900F0BCAC /* GitHubRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE40D2A661B2900F0BCAC /* GitHubRelease.m */; };
 		B29AE4102A661B3200F0BCAC /* GitHubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE40F2A661B3200F0BCAC /* GitHubClient.m */; };
+		B2CDAD7C2A6EEFFD009237FB /* appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = B2CDAD7B2A6EEFFD009237FB /* appcast.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,8 @@
 		B29AE40C2A661B1F00F0BCAC /* GitHubRelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubRelease.h; sourceTree = "<group>"; };
 		B29AE40D2A661B2900F0BCAC /* GitHubRelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubRelease.m; sourceTree = "<group>"; };
 		B29AE40F2A661B3200F0BCAC /* GitHubClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubClient.m; sourceTree = "<group>"; };
+		B2CDAD7B2A6EEFFD009237FB /* appcast.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
+		B2CDAD7D2A6F03CC009237FB /* Updater-Shark-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Updater-Shark-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		B29AE3F02A661A1200F0BCAC /* Updater_Shark */ = {
 			isa = PBXGroup;
 			children = (
+				B2CDAD7D2A6F03CC009237FB /* Updater-Shark-Info.plist */,
 				B29AE3F12A661A1200F0BCAC /* AppDelegate.h */,
 				B29AE3F22A661A1200F0BCAC /* AppDelegate.m */,
 				B29AE40C2A661B1F00F0BCAC /* GitHubRelease.h */,
@@ -94,6 +98,7 @@
 				B29AE3F92A661A1400F0BCAC /* Main.storyboard */,
 				B29AE3FC2A661A1400F0BCAC /* main.m */,
 				B29AE3FE2A661A1400F0BCAC /* Updater_Shark.entitlements */,
+				B2CDAD7B2A6EEFFD009237FB /* appcast.xml */,
 			);
 			path = Updater_Shark;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			files = (
 				B29AE3F82A661A1400F0BCAC /* Assets.xcassets in Resources */,
 				B29AE3FB2A661A1400F0BCAC /* Main.storyboard in Resources */,
+				B2CDAD7C2A6EEFFD009237FB /* appcast.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,24 +318,32 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Updater_Shark/Updater_Shark.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Updater-Shark-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.nod.Updater-Shark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
@@ -340,24 +354,32 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Updater_Shark/Updater_Shark.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Updater-Shark-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.nod.Updater-Shark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;

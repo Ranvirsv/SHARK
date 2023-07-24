@@ -38,13 +38,14 @@
     }];
     
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    return @"https://www.dropbox.com/e/scl/fi/10j1isjruy3iuwzh9v9r3/DMG_Assembly.dmg";
+    return @"https://www.dropbox.com/scl/fi/h0xd6e5afxylneqvswthr/appcast.xml?rlkey=owh0k2c8it3m4d4xrhuojxeob&dl=0";
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Create the updater object
-    self.updaterController = [[SPUStandardUpdaterController alloc] initWithUpdaterDelegate:self userDriverDelegate:self];
+    self.updaterController = [[SPUStandardUpdaterController alloc] initWithStartingUpdater:YES updaterDelegate:self userDriverDelegate:nil];
     [self feedURLStringForUpdater: self.updaterController.updater];
+    [self.updaterController startUpdater];
     [self.updaterController.updater checkForUpdates];
 }
 
