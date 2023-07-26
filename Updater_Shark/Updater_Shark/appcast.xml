@@ -1,23 +1,14 @@
-<?xml verion="1.0" encoding="utf-8"?>
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.4.2">
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-        <title>Shark Updater</title>
-        <link>https://www.dropbox.com/scl/fi/h0xd6e5afxylneqvswthr/appcast.xml?rlkey=owh0k2c8it3m4d4xrhuojxeob&dl=0</link>
-        <description>Release Notes for the latest shark version</description>
-        <language>en</language>
-        
-        <!-- Latest version item -->
+        <title>index</title>
         <item>
-            <title>Version 1.0</title>
-            <sparkle:version>2.4.2</sparkle:version>
-            <sparkle:shortVersionString>2.4.2</sparkle:shortVersionString>
-            <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-            <enclosure url="https://www.dropbox.com/e/scl/fi/10j1isjruy3iuwzh9v9r3/DMG_Assembly.dmg?dl=1"
-            sparkle:version="2.4.2"
-            sparkle:shortVersionString="2.4.2"
-            length="1"
-            type="application/octet-stream"/>
+            <title>20230713.819</title>
+            <pubDate>Tue, 25 Jul 2023 13:53:14 -0700</pubDate>
+            <sparkle:version>20230713.819</sparkle:version>
+            <sparkle:shortVersionString>20230713.819</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
+            <enclosure url="https://www.dropbox.com/scl/fi/10j1isjruy3iuwzh9v9r3/DMG_Assembly.dmg?rlkey=0780jym0d6dcz0c26542h68hf&amp;dl=1" length="40916" type="application/octet-stream"/>
         </item>
     </channel>
 </rss>
-

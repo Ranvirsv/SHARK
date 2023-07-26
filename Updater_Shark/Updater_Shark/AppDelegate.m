@@ -38,7 +38,7 @@
     }];
     
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    return @"https://www.dropbox.com/scl/fi/h0xd6e5afxylneqvswthr/appcast.xml?rlkey=owh0k2c8it3m4d4xrhuojxeob&dl=0";
+    return @"https://www.dropbox.com/scl/fi/z8ob30mn3geh7io6xopnc/appcast.xml?rlkey=a61yb1mt8scnx8gtpmb4aaczu&dl=1";
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
